@@ -12,7 +12,7 @@ This is a web-based to-do list application where users can add, delete, and mark
 ## Technologies Used
 
 - HTML
-- CSS
+- CSS (CDN : TailwindCSS)
 - JavaScript
 
 ## Getting Started
