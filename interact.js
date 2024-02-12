@@ -2,6 +2,7 @@ const submit = document.querySelector("#btnAddTodo");
 const todoList = document.querySelector("#todoList");
 
 submit.addEventListener("click", ()=>{
+    event.preventDefault(); // Prevent default form submission behavior or prevent from refrashing automaticaly
     const todo = document.querySelector("#inputTodo").value;  // we have to initialize todo here so it updates on evry submit
 
     if(todo !== ""){
@@ -21,16 +22,19 @@ submit.addEventListener("click", ()=>{
         todoList.appendChild(btn);
 
         btn.addEventListener("click", ()=>{
-            todoList.removechile(checkbox);
+            todoList.removeChild(checkbox);
             todoList.removeChild(li);
             todoList.removeChild(btn);
         })
 
         checkbox.addEventListener("change", ()=>{
             if (checkbox.checked) {
-                console.log("checked");
+                // console.log("checked");
+                li.classList.add("done");
             } else {
-                console.log("not checked");
+                // console.log("not checked");
+                li.classList.remove("done");
+
             }
         })
         
