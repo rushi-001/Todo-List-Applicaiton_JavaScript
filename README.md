@@ -1,6 +1,6 @@
 # To-Do List Application
 
-This is a web-based to-do list application where users can add, delete, and mark tasks as completed. This project is built using HTML, CSS, and JavaScript. It serves as a practice exercise for DOM manipulation, event handling, and working with local storage to save tasks.
+> This is a web-based to-do list application where users can add, delete, and mark tasks as completed. This project is built using HTML, CSS, and JavaScript. It serves as a practice exercise for DOM manipulation, event handling, and working with local storage to save tasks.
 
 ## Features
 
@@ -17,7 +17,7 @@ This is a web-based to-do list application where users can add, delete, and mark
 
 ## Getting Started
 
-To get a local copy of this project up and running, follow these steps:
+> To get a local copy of this project up and running, follow these steps:
 
 1. Clone this repository to your local machine:
 2. Open the `index.html` file in your web browser.
@@ -31,7 +31,7 @@ To get a local copy of this project up and running, follow these steps:
 
 ## Contributing
 
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+> Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/YourFeature`)
