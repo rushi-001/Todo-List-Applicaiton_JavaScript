@@ -3,6 +3,8 @@ html, body{
     padding: 0;
     background-image: url(assets/bg.jpg);
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 #navbar{
@@ -12,14 +14,17 @@ html, body{
 #showTodos{
     border-radius: 5px;
     margin: 15px;
+    background-color: rgba(245, 245, 245, 0.6);
+    height: 83vh;
+    overflow: auto;
 }
 
 #todoList{
-    color: rgb(255, 255, 255);
+    color: rgb(0,0,0);
     font-size: large;
 }
 
 .done{
     text-decoration: line-through;
-    color: rgb(212, 212, 212);
+    color: rgb(117, 114, 114);
 }
