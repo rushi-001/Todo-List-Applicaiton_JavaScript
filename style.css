@@ -28,3 +28,8 @@ html, body{
     text-decoration: line-through;
     color: rgb(117, 114, 114);
 }
+
+.todoList{
+    display: flex;
+    flex-direction: horizontal;
+}

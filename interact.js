@@ -1,24 +1,51 @@
 const submit = document.querySelector("#btnAddTodo");
 const todoList = document.querySelector("#todoList");
-const displayTodos = document.querySelector("#todos");
+const displayTodos = document.querySelector(".todos");
 
 submit.addEventListener("click", (e)=>{
     e.preventDefault(); // Prevent default form submission behavior or prevent from refrashing automaticaly
     const todo = document.querySelector("#inputTodo").value;  // we have to initialize todo here so it updates on evry submit
 
-    function newUl(todoss){
-        // create new ul, insite ul create new ol
-        // put content inside the ol
-    
-        let ul = document.createElement("ul");
-        let ol = document.createElement("ol");
+    function todoDiv(todon) {
+        const todo = todon;
+        const text = document.createElement("h4");
+        const btnDelete = document.createElement("button");
+        const checkbox = document.createElement("input");
+        const div = document.createElement("div");
+        div.className = "todoList";
+        div.classList = "todoList";
+        checkbox.type = "checkbox";
 
-        ol.innerText = todoss;
-        ul.innerHTML = ul;
+        text.innerText = todo;
+        btnDelete.innerText = "DELETE";
 
-        displayTodos.appendChild(ol);
-        
-        console.log("run");
+        // important part of the code but i did't get it properly....
+        // its like appendChild makes div and put the elements in the div and we append that div into the todoList div i guess
+
+        // Append elements to the div, not directly to the todoList
+        div.appendChild(checkbox);
+        div.appendChild(text);
+        div.appendChild(btnDelete);
+
+        // Append the div to the todoList
+        todoList.appendChild(div);
+
+        btnDelete.addEventListener("click", (e)=>{
+            e.target.parentNode.remove(); // this will remove the div which have delete button inside
+        })
+
+        document.querySelector("#inputTodo").value = "";
+
+        checkbox.addEventListener("change", ()=>{
+            if (checkbox.checked) {
+                // console.log("checked");
+                text.classList.add("done");
+            } else {
+                // console.log("not checked");
+                text.classList.remove("done");
+
+            }
+        })
         
     }
 
@@ -26,45 +53,34 @@ submit.addEventListener("click", (e)=>{
 
         // todoList.innerHTML += "<li>" + todo + "</li>"; This is also an solution
         
-        let ol = document.createElement("ol");  // creating new element "li"
-        const btn = document.createElement("button");  // creating new element "button"
-        const checkbox = document.createElement("input");
-        const br = document.createElement("br");
-        checkbox.type = "checkbox";
-        // const newUL = newUl();
+        // let ol = document.createElement("ol");  // creating new element "li"
+        // const text = document.createElement("h3");
+        // const btn = document.createElement("button");  // creating new element "button"
+        // const checkbox = document.createElement("input");
+        // const br = document.createElement("br");
+        // checkbox.type = "checkbox";
 
-        ol.textContent = todo;
-        btn.textContent = "DELETE";
+        // // ol.textContent = todo;
+        // text.textContent = todo;
+        // ol.classList.add("olColor");
+        // btn.textContent = "DELETE";
 
-        todoList.appendChild(checkbox);
-        // todoList.appendChild(ol);  // appending the newly created li element to todoList to remove the unnecessary content
-        newUl(todo);
-        todoList.appendChild(btn);
-        todoList.appendChild(br);
+        // displayTodos.appendChild(checkbox);
+        // displayTodos.appendChild(text);  // appending the newly created li element to todoList to remove the unnecessary content
+        // displayTodos.appendChild(btn);
+        // displayTodos.appendChild(br);
 
-        document.querySelector("#inputTodo").value = "";
+        // document.querySelector("#inputTodo").value = "";
 
-        btn.addEventListener("click", ()=>{
-            todoList.removeChild(checkbox);
-            // todoList.removeChild(ol);
+        // btn.addEventListener("click", ()=>{
+        //     displayTodos.removeChild(checkbox);
+        //     displayTodos.removeChild(text);
+        //     displayTodos.removeChild(btn);
+        //     displayTodos.removeChild(br);
 
-            todoList.removeChild(btn);
-            todoList.removeChild(br);
-
-        })
-
-        checkbox.addEventListener("change", ()=>{
-            if (checkbox.checked) {
-                // console.log("checked");
-                ol.classList.add("done");
-            } else {
-                // console.log("not checked");
-                ol.classList.remove("done");
-
-            }
-        })
+        // })
         
-
+        todoDiv(todo);
 
     } else {
         alert("Enter Todo!!!");
