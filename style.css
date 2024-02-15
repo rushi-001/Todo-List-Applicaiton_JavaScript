@@ -1,71 +1,72 @@
-html, body{
-    margin: 0;
-    padding: 0;
-    background-image: url(assets/bg.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(assets/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
-#navbar{
-    background-color: rgba(245, 245, 245, 0.6);
+#navbar {
+  background-color: rgba(245, 245, 245, 0.6);
 }
 
-#showTodos{
-    border-radius: 5px;
-    margin: 15px;
-    background-color: rgba(245, 245, 245, 0.6);
-    height: 83vh;
-    overflow: auto;
+#showTodos {
+  border-radius: 5px;
+  margin: 15px;
+  background-color: rgba(245, 245, 245, 0.6);
+  height: 83vh;
+  overflow: auto;
 }
 
-#todoList{
-    color: rgb(0,0,0);
-    font-size: large;
+#todoList {
+  color: rgb(0, 0, 0);
+  font-size: large;
 }
 
-.done{
-    text-decoration: line-through;
-    color: rgb(117, 114, 114);
+.done {
+  text-decoration: line-through;
+  color: rgb(117, 114, 114);
 }
 
-.todoList{
-    display: flex;
-    flex-direction: horizontal;
+.todoList {
+  display: flex;
+  flex-direction: horizontal;
 }
 
-.text{
-    margin: 6px;
+.text {
+  margin: 6px;
 }
 
 .checkbox {
-    width: 0.8em;
-    height: 0.8em;
-    background-color: white;
-    border-radius: 50%;
-    vertical-align: middle;
-    border: 1px solid #ddd;
-    appearance: none;
-    -webkit-appearance: none;
-    outline: none;
-    cursor: pointer;
-    margin-top: 15px;
+  width: 0.8em;
+  height: 0.8em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 15px;
 }
 
 .checkbox:checked {
-    background-color: gray;
+  background-color: gray;
 }
 
-.btnDelete{
-    margin: 3px;
-    border-radius: 10px;
-    background-color: rgba(255, 157, 157, 0.5);
+.btnDelete {
+  margin: 3px;
+  border-radius: 10px;
+  background-color: rgba(255, 157, 157, 0.5);
 }
 
-.btnDelete:hover{
-    background-color: rgba(255, 43, 43, 0.5);
+.btnDelete:hover {
+  background-color: rgba(255, 43, 43, 0.5);
 }
 
-.title{
-    margin-left: 15px;
+.title {
+  margin-left: 15px;
 }
