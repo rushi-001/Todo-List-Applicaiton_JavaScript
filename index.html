@@ -23,13 +23,17 @@
       <!-- input the todo's -->
       <div id="addTodos" class="m-3">
         <form action="">
-            <input id="inputTodo" type="text" class="m-2"><button id="btnAddTodo" class="" type="submit">TODO</button>
+          <div class="input-group mb-3">
+            <input id="inputTodo" type="text" class="form-control" placeholder="Enter TODO'S" aria-label="Enter TODO'S" aria-describedby="button-addon2">
+            <button id="btnAddTodo" class="btn btn-secondary" type="submit">TODO</button>
+          </div>
+            <!-- <input id="inputTodo" type="text" class="m-2"><button id="btnAddTodo" class="btn btn-secondary" type="submit">TODO</button> -->
         </form>
       </div>
 
       <!-- show the todo's -->
       <div id="showTodos">
-        <h3>TODO'S</h3>
+        <h1 class="mt-3 title">TODO'S</h1>
         <div class="todos">
           
         </div>

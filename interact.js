@@ -19,6 +19,11 @@ submit.addEventListener("click", (e)=>{
         text.innerText = todo;
         btnDelete.innerText = "DELETE";
 
+        // style the text, button and checkbox
+        text.classList.add("text");
+        checkbox.classList.add("checkbox");
+        btnDelete.classList.add("btnDelete");
+
         // important part of the code but i did't get it properly....
         // its like appendChild makes div and put the elements in the div and we append that div into the todoList div i guess
 
@@ -31,7 +36,12 @@ submit.addEventListener("click", (e)=>{
         todoList.appendChild(div);
 
         btnDelete.addEventListener("click", (e)=>{
-            e.target.parentNode.remove(); // this will remove the div which have delete button inside
+
+            const confirm1 = confirm("Do you want to Delete ?");
+
+            if(confirm1 == true){
+                e.target.parentNode.remove(); // this will remove the div which have delete button inside
+            }
         })
 
         document.querySelector("#inputTodo").value = "";
@@ -50,36 +60,6 @@ submit.addEventListener("click", (e)=>{
     }
 
     if(todo !== ""){
-
-        // todoList.innerHTML += "<li>" + todo + "</li>"; This is also an solution
-        
-        // let ol = document.createElement("ol");  // creating new element "li"
-        // const text = document.createElement("h3");
-        // const btn = document.createElement("button");  // creating new element "button"
-        // const checkbox = document.createElement("input");
-        // const br = document.createElement("br");
-        // checkbox.type = "checkbox";
-
-        // // ol.textContent = todo;
-        // text.textContent = todo;
-        // ol.classList.add("olColor");
-        // btn.textContent = "DELETE";
-
-        // displayTodos.appendChild(checkbox);
-        // displayTodos.appendChild(text);  // appending the newly created li element to todoList to remove the unnecessary content
-        // displayTodos.appendChild(btn);
-        // displayTodos.appendChild(br);
-
-        // document.querySelector("#inputTodo").value = "";
-
-        // btn.addEventListener("click", ()=>{
-        //     displayTodos.removeChild(checkbox);
-        //     displayTodos.removeChild(text);
-        //     displayTodos.removeChild(btn);
-        //     displayTodos.removeChild(br);
-
-        // })
-        
         todoDiv(todo);
 
     } else {

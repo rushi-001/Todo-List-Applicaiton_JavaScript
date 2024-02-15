@@ -33,3 +33,39 @@ html, body{
     display: flex;
     flex-direction: horizontal;
 }
+
+.text{
+    margin: 6px;
+}
+
+.checkbox {
+    width: 0.8em;
+    height: 0.8em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.checkbox:checked {
+    background-color: gray;
+}
+
+.btnDelete{
+    margin: 3px;
+    border-radius: 10px;
+    background-color: rgba(255, 157, 157, 0.5);
+}
+
+.btnDelete:hover{
+    background-color: rgba(255, 43, 43, 0.5);
+}
+
+.title{
+    margin-left: 15px;
+}
